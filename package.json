@@ -1,0 +1,39 @@
+{
+  "name": "epitome-websocket-server",
+  "version": "1.0.0",
+  "description": "websocket server for live chat",
+  "main": "main.ts",
+  "scripts": {
+    "build": "tsc",
+    "debug": "",
+    "dev": "npx ts-node src/main.ts",
+    "runbuild": "npx tsc && node target/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risabvishwakarma/epitome-websocket.git"
+  },
+  "author": "Risab Vishwakarma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/risabvishwakarma/epitome-websocket/issues"
+  },
+  "homepage": "https://github.com/risabvishwakarma/epitome-websocket#readme",
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.9.1",
+    "@types/ws": "^8.5.13",
+    "typescript": "^5.7.2",
+    "ws": "^8.18.0"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/socket.io": "^3.0.1",
+    "cookie": "^1.0.2",
+    "epitome-websocket-server": "file:",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "socket.io": "^4.8.1"
+  }
+}

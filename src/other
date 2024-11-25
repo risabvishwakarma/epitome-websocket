@@ -1,0 +1,37 @@
+{
+  "_id": ObjectId("unique_room_id"),    // MongoDB ObjectId for the room
+  "name": "room_1234",                  // Room ID or unique name (could be dynamic or auto-generated)
+  "participants": [
+    { "userId": ObjectId("user_id_1"), "role": "consumer" },
+    { "userId": ObjectId("user_id_2"), "role": "consultant" }
+  ],                                    // Array of participants in the chat
+  "createdAt": ISODate("2024-11-20T12:00:00Z"), // Date when the room was created
+  "updatedAt": ISODate("2024-11-20T12:10:00Z"), // Date of last update
+  "status": "active",                   // Room status (active, ended, etc.)
+  "startTime": ISODate("2024-11-20T12:05:00Z"), // Start time of the chat
+  "endTime": ISODate("2024-11-20T12:25:00Z")    // End time (if it's a time-limited chat)
+}
+
+{
+  "_id": ObjectId("session_id"),    // Unique session ID
+  "roomId": ObjectId("room_id"),    // Reference to the room
+  "consumerId": ObjectId("consumer_id"), // Consumer's user ID
+  "consultantId": ObjectId("consultant_id"), // Consultant's user ID
+  "status": "active",                // Current session status (active, completed, expired)
+  "startTime": ISODate("2024-11-20T12:00:00Z"), // Session start time
+  "endTime": ISODate("2024-11-20T12:30:00Z"),   // Session end time (can be dynamic)
+  "duration": 30,                    // Duration in minutes (if time-limited)
+  "createdAt": ISODate("2024-11-20T11:50:00Z"), // Time the session was created
+  "updatedAt": ISODate("2024-11-20T12:10:00Z")  // Time the session was last updated
+}
+
+
+{
+  "_id": ObjectId("unique_message_id"),  // MongoDB ObjectId
+  "roomId": ObjectId("room_id"),         // Reference to the Room ID
+  "senderId": ObjectId("user_id_1"),     // User ID of the sender
+  "message": "Hello, how can I help you today?",  // The chat message content
+  "timestamp": ISODate("2024-11-20T12:06:00Z"), // Time the message was sent
+  "type": "text",                        // Type of message (text, image, file, etc.)
+  "status": "sent"                       // Status of the message (sent, delivered, read)
+}
